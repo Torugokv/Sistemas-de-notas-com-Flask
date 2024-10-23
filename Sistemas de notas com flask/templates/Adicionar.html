@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Nota </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}">
+</head>
+<body>
+    <h1>Adicionar Nova Nota</h1>
+    <form method = "post">
+        <label for = "aluno"> Aluno </label>
+        <input type = "text" id="aluno" name = "aluno" required>
+        
+        <label for ="disciplina">Disciplima: </label>
+        <input type ="text" id="disciplina" name="disciplina" required>
+
+        <label for = "nota"> Nota: </label>
+        <input type = "text" id="nota" name = "nota" required>
+
+        <input type = "submit" value="Adicionar">
+    </form>
+    <a href="{{ url_for('index') }}">Voltar à Lista de Notas </a>
+</body>
+</html>
