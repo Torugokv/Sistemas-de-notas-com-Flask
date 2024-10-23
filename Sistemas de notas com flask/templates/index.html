@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}">
     <title>Document</title>
 </head>
 <body>
     <h1> Lista de Notas </h1>
-    <table>
+    <table border = "1">
         <tr>
             <th>Aluno</th>
             <th>Disciplina</th>
@@ -21,6 +22,6 @@
         </tr>
         {% endfor %}
     </table>
-    <a href="{{ url_for('adicionar') }}"> Adicionar Nova Nota</a>
+    <a href="{{ url_for('adicionar') }}" class="input"> Adicionar Nova Nota</a>
 </body>
 </html>
